@@ -1,1 +1,53 @@
 /*  your css code here. If applicable */
+.star {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid yellow;
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid yellow;
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+}
+
+.star:after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid yellow;
+  border-left: 50px solid transparent;
+  transform: rotate(70deg);
+}
+
+.star:nth-child(2):before,
+.star:nth-child(2):after {
+  border-bottom: 50px solid yellow;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  top: -40px;
+}
+
+.star:nth-child(2):before {
+  transform: rotate(-35deg);
+}
+
+.star:nth-child(2):after {
+  transform: rotate(35deg);
+}
